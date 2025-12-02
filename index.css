@@ -27,20 +27,12 @@ button{
 
     background-color: #F2F3F4;
 }
-
-div.character{
-    flex: 0 0 auto;
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-    background-color: #D5D8DC;
-    box-shadow: #7f7f7f 1px 1px 8px;
-}
 /* ↑消す */
 
 body{
     margin: 0;
     padding: 55px 0 calc(40px + env(safe-area-inset-bottom)) 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;;
 }
 
 /* header */
@@ -53,7 +45,7 @@ header{
 }
 
 svg.main_menu, svg.search{
-    margin: 10px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
 }
 
 
@@ -76,7 +68,7 @@ h2{
     display: flex;
     overflow-x: auto;
     gap: 20px;
-    padding: 10px 15px 20px 15px;
+    padding: 10px 15px 40px 15px;
     scroll-behavior: smooth;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;    /* IE/Edge */
@@ -95,7 +87,14 @@ h2{
     flex-direction: column;
 }
 
-
+div.character{
+    flex: 0 0 auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    background-color: #D5D8DC;
+    box-shadow: #7f7f7f 1px 1px 8px;
+}
 
 /* footer */
 footer{
