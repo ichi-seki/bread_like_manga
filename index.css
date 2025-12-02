@@ -31,7 +31,7 @@ button{
 
 body{
     margin: 0;
-    padding: 55px 0 calc(40px + env(safe-area-inset-bottom)) 0;
+    padding: 55px 0 calc(50px + env(safe-area-inset-bottom)) 0;
     font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;;
 }
 
@@ -61,7 +61,15 @@ svg.main_menu, svg.search{
 
 h2{
     font-size: 24px;
-    margin: -10px 0 0 10px;
+    margin: -10px 0 0 20px;
+}
+
+.lines{
+    border: none;
+    height: 1px;
+    margin: 0 auto 10px auto;
+    width: calc(100% - 20px);
+    background-color: black;
 }
 
 .scroll-container{
@@ -153,6 +161,33 @@ div.character{
     box-shadow: #7f7f7f 1px 1px 8px;
 }
 
+.character img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content_info{
+    border: 1px solid #7f7f7f;
+    border-radius: 8px;
+    padding: 5px;
+    margin: -5px 15px;
+    text-align: center;
+}
+
+.con_info_h3{
+    margin: 5px 0 7px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.content_info p{
+    margin: 5px 0;
+    color: #4e4e4e;
+}
+
 /* footer */
 footer{
     background-color:#ECF0F1;
@@ -165,16 +200,22 @@ footer{
 }
 
 .links h3{
-    text-align: center;;
+    text-align: center;
+    font-weight: normal;
 }
 
 .links ul{
     list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 30px;
 }
 
 .links a{
     text-decoration: none;
-    color: white;
+    color: rgb(206, 206, 206);
 }
 
 nav{
