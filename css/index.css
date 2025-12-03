@@ -136,6 +136,7 @@ h2{
 }
 
 .scroll-container{
+    z-index: 1;
     display: flex;
     overflow-x: auto;
     gap: 20px;
