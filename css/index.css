@@ -78,6 +78,7 @@ body{
 
 .header_nav, .footer_nav{
     transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 100;
 }
 
 body.scrolling-down .header_nav{
