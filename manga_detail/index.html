@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="header_nav" aria-label="上部ナビゲーション">
+            <button class="menu-icon" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="メニューを開く">
+                <svg class="main_menu" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <section class="main_img">
+                <div class="img">
+                    <img src="../images/p1.jpeg" alt="マシンガンロックンの表紙画像">
+                    <p class="sentence">法則の塔。そこは、<br>真実が最も嘘くさい場所。</p>
+                </div>
+                <div class="title">
+                    <h1>マシンガンロック</h1>
+                    <button class="share" aria-label="シェアする">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                            <path d="M19 22H5c-1.654 0-3-1.346-3-3V8h2v11c0 .552.449 1 1 1h14c.552 0 1-.448 1-1v-2h2v2C22 20.654 20.654 22 19 22zM16.707 11.707L15.293 10.293 18.586 7 15.293 3.707 16.707 2.293 21.414 7z"></path><path d="M8,18H6v-1c0-6.065,4.935-11,11-11h3v2h-3c-4.963,0-9,4.037-9,9V18z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <h2 class="author">一月一日</h2>
+            </section>
+            <div class="tab"></div>
+            <section class="episode">
+                <label for="chapter" class="hide"></label>
+                <select id="chapter" name="chapter">
+                    <option value="王の編">王の編</option>
+                    <option value="霧の里">霧の里</option>
+                </select>
+                <button class="episode3">
+                    <img class="epi_img" src="#">
+                    <h3>３話　昨日見た夢</h3>
+                    <p>2025/12/29 更新</p>
+                    <p>70コイン</p>
+                </button>
+                <button class="episode2">
+                    <img class="epi_img" src="#">
+                    <h3>２話　昨日見た夢</h3>
+                    <p>2025/12/14 更新</p>
+                    <p>無料</p>
+                </button>
+                <button class="episode1">
+                    <img class="epi_img" src="#">
+                    <h3>１話　昨日見た夢</h3>
+                    <p>2025/12/3 更新</p>
+                    <p>無料</p>
+                </button>
+                <button class="read_more">もっと見る</button>
+                <button class="read_from_first">最初から読む</button>
+            </section>
+            <section class="read_by_character"></section>
+            <section class="recomandation"></section>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer_nav" aria-label="下部ナビゲーション">
+            <a href="index.html" class="nav_item active" aria-current="page" aria-label="ホーム">
+                <svg class="home" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"/>
+                </svg>
+            </a>
+            <a href="shelf/index.html" class="nav_item" aria-label="本棚">
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                    <path fill="#000000" d="M4 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-4.703L16 20a1 1 0 0 0 1.186.77l3.912-.832a1 1 0 0 0 .77-1.186l-2.91-13.694a1 1 0 0 0-1.186-.77l-2.78.59A1 1 0 0 0 14 4h-4a1 1 0 0 0-1-1zm6 3h3v8h-3zm0 13v-3h3v3zM8 5v10H5V5zm0 12v2H5v-2zm9.332-.35l1.956-.416l.416 1.956l-1.956.416zm-.416-1.957l-1.663-7.825l1.956-.416l1.664 7.826z"/>
+                </svg>
+            </a>
+            <a href="mypage/index.html" class="nav_item" aria-label="マイページ">
+                <svg class="user" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path d="M470.5 463.6C451.4 416.9 405.5 384 352 384L288 384C234.5 384 188.6 416.9 169.5 463.6C133.9 426.3 112 375.7 112 320C112 205.1 205.1 112 320 112C434.9 112 528 205.1 528 320C528 375.7 506.1 426.2 470.5 463.6zM430.4 496.3C398.4 516.4 360.6 528 320 528C279.4 528 241.6 516.4 209.5 496.3C216.8 459.6 249.2 432 288 432L352 432C390.8 432 423.2 459.6 430.5 496.3zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM320 304C297.9 304 280 286.1 280 264C280 241.9 297.9 224 320 224C342.1 224 360 241.9 360 264C360 286.1 342.1 304 320 304zM232 264C232 312.6 271.4 352 320 352C368.6 352 408 312.6 408 264C408 215.4 368.6 176 320 176C271.4 176 232 215.4 232 264z"/>
+                </svg>
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
