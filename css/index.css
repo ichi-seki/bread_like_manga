@@ -72,7 +72,7 @@ button{
 
 body{
     margin: 0;
-    padding: 55px 0 calc(50px + env(safe-area-inset-bottom)) 0;
+    padding: 40px 0 calc(50px + env(safe-area-inset-bottom)) 0;
     font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;;
 }
 
@@ -101,7 +101,7 @@ body.scrolling-down{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: flex;
 }
 
