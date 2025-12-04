@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/detail.css">
-    <base href="/bread_like_manga/">
+    <!-- <base href="/bread_like_manga/"> -->
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
         <section class="content">
             <section class="main_img">
                 <div class="img">
-                    <img src="../images/p1.jpeg" alt="マシンガンロックンの表紙画像">
+                    <img src="images/p1.jpeg" alt="マシンガンロックンの表紙画像">
                     <p class="sentence">法則の塔。そこは、<br>真実が最も嘘くさい場所。</p>
                 </div>
                 <div class="title">
@@ -40,29 +40,32 @@
                 <button class="story_info">作品詳細</button>
             </div>
             <section class="episode">
-                <label for="chapter" class="hide"></label>
-                <select id="chapter" name="chapter">
-                    <option value="王の編">王の編</option>
-                    <option value="霧の里">霧の里</option>
-                </select>
-                <button class="episode3">
-                    <img class="epi_img" src="#">
-                    <h3>３話　昨日見た夢</h3>
-                    <p>2025/12/29 更新</p>
-                    <p>70コイン</p>
-                </button>
-                <button class="episode2">
-                    <img class="epi_img" src="#">
-                    <h3>２話　昨日見た夢</h3>
-                    <p>2025/12/14 更新</p>
-                    <p>無料</p>
-                </button>
-                <button class="episode1">
-                    <img class="epi_img" src="#">
-                    <h3>１話　昨日見た夢</h3>
-                    <p>2025/12/3 更新</p>
-                    <p>無料</p>
-                </button>
+                <div class="arc-selector">
+                    <select id="chapter" name="chapter">
+                        <option value="王の編">王の編</option>
+                        <option value="霧の里">霧の里</option>
+                    </select>
+                </div>
+                <div class="episode_list">
+                    <button class="episode3">
+                        <img class="epi_img" src="#">
+                        <h3>３話　昨日見た夢</h3>
+                        <p>2025/12/29 更新</p>
+                        <p>70コイン</p>
+                    </button>
+                    <button class="episode2">
+                        <img class="epi_img" src="#">
+                        <h3>２話　昨日見た夢</h3>
+                        <p>2025/12/14 更新</p>
+                        <p>無料</p>
+                    </button>
+                    <button class="episode1">
+                        <img class="epi_img" src="#">
+                        <h3>１話　昨日見た夢</h3>
+                        <p>2025/12/3 更新</p>
+                        <p>無料</p>
+                    </button>
+                </div>
                 <button class="read_more">もっと見る</button>
                 <button class="read_from_first">最初から読む</button>
             </section>
