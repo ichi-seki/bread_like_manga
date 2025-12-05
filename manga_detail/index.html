@@ -18,11 +18,11 @@
             </button>
         </nav>
     </header>
-    <main>
+    <main>      
         <section class="content">
             <section class="main_img">
                 <div class="img">
-                    <img src="images/p1.jpeg" alt="マシンガンロックンの表紙画像">
+                    <img src="../images/p1.jpeg" alt="マシンガンロックンの表紙画像">
                     <p class="sentence">法則の塔。そこは、<br>真実が最も嘘くさい場所。</p>
                 </div>
                 <div class="title">
@@ -39,38 +39,166 @@
                 <button class="episode_tab">エピソード</button>
                 <button class="story_info">作品詳細</button>
             </div>
-            <section class="episode">
+            <section class="episode_page">
                 <div class="arc-selector">
                     <select id="chapter" name="chapter">
                         <option value="王の編">王の編</option>
                         <option value="霧の里">霧の里</option>
                     </select>
                 </div>
-                <div class="episode_list">
-                    <button class="episode3">
-                        <img class="epi_img" src="#">
-                        <h3>３話　昨日見た夢</h3>
-                        <p>2025/12/29 更新</p>
-                        <p>70コイン</p>
-                    </button>
-                    <button class="episode2">
-                        <img class="epi_img" src="#">
-                        <h3>２話　昨日見た夢</h3>
-                        <p>2025/12/14 更新</p>
-                        <p>無料</p>
-                    </button>
-                    <button class="episode1">
-                        <img class="epi_img" src="#">
-                        <h3>１話　昨日見た夢</h3>
-                        <p>2025/12/3 更新</p>
-                        <p>無料</p>
-                    </button>
+                <div class="episode_list"><hr>
+                    <a class="episode" href="#">
+                        <div class="left_img">
+                            <img class="epi_img" src="../images/e4.png">
+                        </div>
+                        <div class="epi_info">
+                            <h3>４. 遥なる雷鳴へ</h3>
+                            <p>2025/12/29 更新　<span class="cost">70コイン</span></p>
+                        </div>
+                    </a><hr>
+                    <a class="episode" href="#">
+                        <div class="left_img">
+                            <img class="epi_img" src="../images/e3.png">
+                        </div>
+                        <div class="epi_info">
+                            <h3>３. 昨日見た夢</h3>
+                            <p>2025/12/29 更新　<span class="cost">70コイン</span></p>
+                        </div>
+                    </a><hr>
+                    <a class="episode" href="#">
+                        <div class="left_img">
+                            <img class="epi_img" src="../images/e2.png">
+                        </div>
+                        <div class="epi_info">
+                            <h3>２. その瞳は同じ海の色</h3>
+                            <p>2025/12/14 更新　<span class="purchased">購入済み</span></p>
+                        </div>
+                    </a><hr>
+                    <a class="episode" href="#">
+                        <div class="left_img">
+                            <img class="epi_img" src="../images/e1.png">
+                        </div>
+                        <div class="epi_info">
+                            <h3>１. 明日を思い出せない</h3>
+                            <p>2025/12/3 更新　<span class="free">無料</span></p>
+                        </div>
+                    </a><hr>
                 </div>
-                <button class="read_more">もっと見る</button>
-                <button class="read_from_first">最初から読む</button>
+                <div class="c_buttons">
+                    <button class="read_more">もっと見る</button>
+                    <a class="read_from_first" href="#">最初から読む</a>
+                </div>
             </section>
-            <section class="read_by_character"></section>
-            <section class="recomandation"></section>
+            <section class="read_by_character"aria-labelledby="heading-character">
+                <div class="ch_heading">
+                    <h2>キャラで読む</h2>
+                    <a href="#" class="all_characters">一覧＞</a>
+                </div><hr class="lines">
+                <div class="scroll-container">
+                    <div class="character">
+                        <img src="images/p1.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p2.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p3.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p4.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p2.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p1.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p3.jpeg" alt="image from pinterest">
+                    </div>
+                    <div class="character">
+                        <img src="images/p4.jpeg" alt="image from pinterest">
+                    </div>
+                </div>
+            </section>
+            <section class="recomandation">
+                <div class="scroll-container" id="authorSug">
+                    <a class="manga">
+                        <img src="images/p4.jpeg" alt="image from pinterest">
+                        <div class="manga_info">
+                            <p class="update">本日更新</p>
+                            <h3>天空城での踊り方</h3>
+                            <p>空中都市を舞台にしたミステリーな魔法ファンタジー</p>
+                            <div class="tags">
+                                <p>ファンタジー</p>
+                                <p>冒険</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="manga">
+                        <img src="images/p3.jpeg" alt="image from pinterest">
+                        <div class="manga_info">
+                            <p class="update">七日前更新</p>
+                            <h3>未来戦記ナイトウォーカー</h3>
+                            <p>彼女たちは人間ではない。人形である。彼らは人のための消耗品であった。</p>
+                            <div class="tags">
+                                <p>SF</p>
+                                <p>アクション</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="manga">
+                        <img src="images/p1.jpeg" alt="image from pinterest">
+                        <div class="manga_info">
+                            <p class="update">三日前更新</p>
+                            <h3>マシンガンロック</h3>
+                            <p>五人の変人探偵集団による異能力を使った現代SFコメディー。</p>
+                            <div class="tags">
+                                <p>SF</p>
+                                <p>コメディー</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll-container" id="otherSug">
+                    <a class="manga">
+                        <img src="images/p4.jpeg" alt="image from pinterest">
+                        <div class="manga_info">
+                            <p class="update">本日更新</p>
+                            <h3>天空城での踊り方</h3>
+                            <p>空中都市を舞台にしたミステリーな魔法ファンタジー</p>
+                            <div class="tags">
+                                <p>ファンタジー</p>
+                                <p>冒険</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="manga">
+                        <img src="images/p3.jpeg" alt="image from pinterest">
+                        <div class="manga_info">
+                            <p class="update">七日前更新</p>
+                            <h3>未来戦記ナイトウォーカー</h3>
+                            <p>彼女たちは人間ではない。人形である。彼らは人のための消耗品であった。</p>
+                            <div class="tags">
+                                <p>SF</p>
+                                <p>アクション</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="manga">
+                        <img src="images/p1.jpeg" alt="image from pinterest">
+                        <div class="manga_info">
+                            <p class="update">三日前更新</p>
+                            <h3>マシンガンロック</h3>
+                            <p>五人の変人探偵集団による異能力を使った現代SFコメディー。</p>
+                            <div class="tags">
+                                <p>SF</p>
+                                <p>コメディー</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </section>
     </main>
     <footer>
