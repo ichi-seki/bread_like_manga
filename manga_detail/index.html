@@ -23,18 +23,18 @@
         <section class="content">
             <section class="main_img">
                 <div class="img">
-                    <img src="images/cover/p1.jpeg" alt="マシンガンロックンの表紙画像">
-                    <p class="sentence">法則の塔。そこは、<br>真実が最も嘘くさい場所。</p>
+                    <img id="coverImg" src="images/cover/p1.jpeg" alt="マシンガンロックンの表紙画像">
+                    <p id="coverSen" class="sentence">法則の塔。そこは、<br>真実が最も嘘くさい場所。</p>
                 </div>
                 <div class="title">
-                    <h1>マシンガンロック</h1>
+                    <h1 id="title">マシンガンロック</h1>
                     <button class="share" aria-label="シェアする">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
                             <path d="M19 22H5c-1.654 0-3-1.346-3-3V8h2v11c0 .552.449 1 1 1h14c.552 0 1-.448 1-1v-2h2v2C22 20.654 20.654 22 19 22zM16.707 11.707L15.293 10.293 18.586 7 15.293 3.707 16.707 2.293 21.414 7z"></path><path d="M8,18H6v-1c0-6.065,4.935-11,11-11h3v2h-3c-4.963,0-9,4.037-9,9V18z"></path>
                         </svg>
                     </button>
                 </div>
-                <h2 class="author">一月一日</h2>
+                <h2 class="author" id="author">一月一日</h2>
             </section>
             <div class="tab">
                 <button class="episode_tab active">エピソード</button>
@@ -43,47 +43,12 @@
             <section class="episode_page">
                 <div class="arc-selector">
                     <select id="chapter" name="chapter">
-                        <!-- <option value="王の編">王の編</option>
-                        <option value="霧の里">霧の里</option> -->
+                        <!-- episode -->
                     </select>
                 </div>
                 <div class="episode_list" id="epiList"><hr>
-                    <!-- <a class="episode" href="#">
-                        <div class="left_img">
-                            <img class="epi_img" src="images/e4.png">
-                        </div>
-                        <div class="epi_info">
-                            <h3>４. 遥なる雷鳴へ</h3>
-                            <p>2025/12/29 更新　<span class="cost">70コイン</span></p>
-                        </div>
-                    </a><hr>
-                    <a class="episode" href="#">
-                        <div class="left_img">
-                            <img class="epi_img" src="images/e3.png">
-                        </div>
-                        <div class="epi_info">
-                            <h3>３. 昨日見た夢</h3>
-                            <p>2025/12/29 更新　<span class="cost">70コイン</span></p>
-                        </div>
-                    </a><hr>
-                    <a class="episode" href="#">
-                        <div class="left_img">
-                            <img class="epi_img" src="images/e2.png">
-                        </div>
-                        <div class="epi_info">
-                            <h3>２. その瞳は同じ海の色</h3>
-                            <p>2025/12/14 更新　<span class="purchased">購入済み</span></p>
-                        </div>
-                    </a><hr>
-                    <a class="episode" href="#">
-                        <div class="left_img">
-                            <img class="epi_img" src="images/e1.png">
-                        </div>
-                        <div class="epi_info">
-                            <h3>１. 明日を思い出せない</h3>
-                            <p>2025/12/3 更新　<span class="free">無料</span></p>
-                        </div>
-                    </a><hr> --><hr>
+                    <!-- episode -->
+                    <hr>
                 </div>
                 <div class="c_buttons">
                     <button class="read_more">もっと見る</button>

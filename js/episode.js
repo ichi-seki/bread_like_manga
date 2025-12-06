@@ -2,11 +2,46 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const params = new URLSearchParams(window.location.search);
     const mangaId = params.get('id');
     if (mangaId) {
-        fetchAndSetupEpisodes(mangaId)
+        fetchMangaBasicInfo(mangaId);
+        fetchAndSetupEpisodes(mangaId);
+    } else {
+        console.error("URLにidが含まれていません");
     }
 });
 
 let allEpisodesData = [];
+
+async function fetchMangaBasicInfo(mangaId){
+    const jsonPath = 'json/manga_deta.json';
+    try {
+        const response = await fetch(jsonPath);
+        if (!response.ok) throw new Error (`基本データが見つかりません (${jsonPath})`);
+
+        const mangaList = await response.json();
+
+        const targetManga = mangaList.find(manga => manga.id == mangaId);
+
+        if (targetManga) {
+            const titleEl = document.querySelector('#title');
+            const authorEl = document.querySelector('#author');
+            const coverSenEl = document.querySelector('#coverSen');
+            const imgEl = document.querySelector('#coverImg');
+
+            if (titleEl) titleEl.textContent = targetManga.title;
+            if (authorEl) authorEl.textContent = targetManga.author;
+            if (coverSenEl) coverSenEl.textContent = targetManga.coverSen
+            if (imgEl) {
+                imgEl.src = targetManga.image;
+                imgEl.alt = `${targetManga.title}の表紙`;
+            }
+        } else {
+            console.error("指定されたIDの作品データは見つかりませんでした");
+        }
+    } catch (e) {
+        console.error("基本情報読み込みエラー", e)
+    }
+}
+
 
 async function fetchAndSetupEpisodes(mangaId) {
     const jsonPath = `json/episode/episode_${mangaId}.json`;
