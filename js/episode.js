@@ -82,13 +82,13 @@ function setupArcDropdown(deta) {
 
 function renderEpisodeList(selectedArc) {
     const container = document.querySelector('#epiList')
-    const filteredEpisode = allEpisodesData.filter(ep => ep.arc === selectedArc);
+    const filteredEpisode = allEpisodesData.filter(ep => ep.arc === selectedArc).sort((a,b) => b.episodeId - a.episodeId);
     let htmlContent = '';
     const params = new URLSearchParams(window.location.search);
     const currentMangaId = params.get('id');
 
     filteredEpisode.forEach(ep => {
-        const renderLink = `render/`
+        const renderLink = `render.html?mangaId=${currentMangaId}&ep=${ep.episodeId}`;
         htmlContent += `<hr>
         <a class="episode" href="#" ...>
             <div class="left_img">
