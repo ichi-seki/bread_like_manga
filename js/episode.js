@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     const params = new URLSearchParams(window.location.search);
     const mangaId = params.get('id');
-    if (mangaId) {
+    if (mangaId && episodeId) {
         fetchMangaBasicInfo(mangaId);
         fetchAndSetupEpisodes(mangaId);
     } else {
@@ -84,7 +84,11 @@ function renderEpisodeList(selectedArc) {
     const container = document.querySelector('#epiList')
     const filteredEpisode = allEpisodesData.filter(ep => ep.arc === selectedArc);
     let htmlContent = '';
+    const params = new URLSearchParams(window.location.search);
+    const currentMangaId = params.get('id');
+
     filteredEpisode.forEach(ep => {
+        const renderLink = `render/`
         htmlContent += `<hr>
         <a class="episode" href="#" ...>
             <div class="left_img">
