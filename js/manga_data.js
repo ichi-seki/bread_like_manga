@@ -86,7 +86,7 @@ function displayManga(mangaList, containerId) {
 
 async function loadMangaList(){
     try{
-        const response = await fetch('../json/manga_deta.json');
+        const response = await fetch('json/manga_deta.json');
     if (!response.ok) {
         throw new Error(`データを取得できませんでした：${response.status}`);
     }
