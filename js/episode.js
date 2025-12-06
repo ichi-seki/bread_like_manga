@@ -53,7 +53,7 @@ function renderEpisodeList(selectedArc) {
         htmlContent += `<hr>
         <a class="episode" href="#" ...>
             <div class="left_img">
-                <img src="${ep.thumbnail}">
+                <img class="epi_img" src="${ep.thumbnail}">
             </div>
             <div class="epi_info">
                 <h3>${ep.episodeId}. ${ep.title}</h3>
