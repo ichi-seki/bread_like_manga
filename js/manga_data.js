@@ -1,52 +1,56 @@
-const MangaData = [{
-    id: 1,
-    title: "マシンガンロック",
-    image: "images/p1.jpeg",
-    alt: "image of マシンガンロック",
-    update: "三日前更新",
-    daysAgo: 3,
-    description: "五人の変人探偵集団による異能力を使った現代SFコメディー。",
-    genres: ["アクション", "冒険"],
-    like: 120,
-    isNew: true
-}
-, {
-    id: 2,
-    title: "暁月リベンジ",
-    image: "images/p2.jpeg",
-    alt: "image of 暁月リベンジ",
-    update: "昨日更新",
-    daysAgo: 1,
-    description: "人間に扮した悪魔二人組が街の事件を拳で解決していく",
-    genres: ["ファンタジー", "冒険"],
-    like: 95,
-    isNew: false
-}
-, {
-    id: 3,
-    title: "コメディークラブ",
-    image: "images/p3.jpeg",
-    alt: "image of コメディークラブ",
-    update: "七日前更新",
-    daysAgo: 7,
-    description: "笑いとアクションが融合したユニークな物語。",
-    genres: ["コメディー", "アクション"],
-    like: 80,
-    isNew: false
-}
-, {
-    id: 4,
-    title: "冒険の書",
-    image: "images/p4.jpeg",
-    alt: "image of 冒険の書",
-    update: "今日更新",
-    daysAgo: 0,
-    description: "未知の世界を探検する冒険譚。",
-    genres: ["冒険", "ファンタジー"],
-    like: 110,
-    isNew: true
-}
-];
+// const MangaData = [{
+//     id: 1,
+//     title: "マシンガンロック",
+//     image: "images/p1.jpeg",
+//     alt: "image of マシンガンロック",
+//     update: "三日前更新",
+//     daysAgo: 3,
+//     description: "五人の変人探偵集団による異能力を使った現代SFコメディー。",
+//     genres: ["アクション", "冒険"],
+//     like: 120,
+//     author: '一月一日',
+//     isNew: true
+// }
+// , {
+//     id: 2,
+//     title: "暁月リベンジ",
+//     image: "images/p2.jpeg",
+//     alt: "image of 暁月リベンジ",
+//     update: "昨日更新",
+//     daysAgo: 1,
+//     description: "人間に扮した悪魔二人組が街の事件を拳で解決していく",
+//     genres: ["ファンタジー", "冒険"],
+//     like: 95,
+//     author: '一月一日',
+//     isNew: false
+// }
+// , {
+//     id: 3,
+//     title: "コメディークラブ",
+//     image: "images/p3.jpeg",
+//     alt: "image of コメディークラブ",
+//     update: "七日前更新",
+//     daysAgo: 7,
+//     description: "笑いとアクションが融合したユニークな物語。",
+//     genres: ["コメディー", "アクション"],
+//     like: 80,
+//     author: '日暮奈々',
+//     isNew: false
+// }
+// , {
+//     id: 4,
+//     title: "冒険の書",
+//     image: "images/p4.jpeg",
+//     alt: "image of 冒険の書",
+//     update: "今日更新",
+//     daysAgo: 0,
+//     description: "未知の世界を探検する冒険譚。",
+//     genres: ["冒険", "ファンタジー"],
+//     like: 110,
+//     author: '西山和',
+//     isNew: true
+// }
+// ];
 
 function genreTemplate(genres) {
     return genres.map(genre => `<p>${genre}</p>`).join('');
@@ -57,7 +61,9 @@ const scrollContainer = document.querySelector('#scrollContainer');
 function displayManga(mangaList, containerId) {
     const container = document.querySelector(containerId);
     if (!container) return;
+
     container.innerHTML = '';
+
     mangaList.forEach(manga => {
         const mangaCard = document.createElement('a');
         mangaCard.className = 'manga';
@@ -78,7 +84,23 @@ function displayManga(mangaList, containerId) {
     });
 }
 
-MangaData.sort((a, b) => a.daysAgo - b.daysAgo);
+async function loadMangaList(){
+    try{
+        const response = await fetch('../json/manga_deta.json');
+    if (!response.ok) {
+        throw new Error(`データを取得できませんでした：${response.status}`);
+    }
+    let mangaDeta = await response.json();
 
-displayManga(MangaData, '#continueList');
-displayManga(MangaData.filter(manga => manga.isNew), '#suggestList');
+    const continueList = [...mangaDeta].sort((a,b) => a.daysAgo - b.daysAgo);
+    displayManga(continueList, '#continueList');
+
+    const suggestList = mangaDeta.filter(manga => manga.isNew);
+        displayManga(suggestList, '#suggestList');
+
+    } catch (error) {
+        console.error("トップページの描画に必要なデータ処理に失敗しました:", error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadMangaList);
