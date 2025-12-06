@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=> {
     const params = new URLSearchParams(window.location.search);
     const mangaId = params.get('id');
-    if (mangaId && episodeId) {
+    if (mangaId) {
         fetchMangaBasicInfo(mangaId);
         fetchAndSetupEpisodes(mangaId);
     } else {
