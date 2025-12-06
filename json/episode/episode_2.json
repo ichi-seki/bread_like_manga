@@ -1,0 +1,38 @@
+[
+    {
+        "episodeId": 4,
+        "title": "共にいた春は",
+        "arc": "朝日が綺麗",
+        "thumbnail": "images/episode/e4.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isLocked": false
+    },
+    {
+        "episodeId": 3,
+        "title": "消えた昨日の秘密",
+        "arc": "朝日が綺麗",
+        "thumbnail": "images/episode/e3.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isPurchased": false
+    },
+    {
+        "episodeId": 2,
+        "title": "青い空には虹があう",
+        "arc": "西の公園",
+        "thumbnail": "images/episode/e2.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isPurchased": true
+    },
+    {
+        "episodeId": 1,
+        "title": "バカだと言われた",
+        "arc": "西の公園",
+        "thumbnail": "images/episode/e1.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isPurchased": true
+    }
+]

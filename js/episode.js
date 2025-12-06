@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 let allEpisodesData = [];
 
 async function fetchAndSetupEpisodes(mangaId) {
-    const jsonPath = `../json/episode/episode_${mangaId}.json`;
+    const jsonPath = `json/episode/episode_${mangaId}.json`;
     try {
         const response = await fetch(jsonPath);
         if (!response.ok) throw new Error("データが見つかりません");

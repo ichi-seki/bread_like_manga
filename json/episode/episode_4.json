@@ -1,0 +1,38 @@
+[
+    {
+        "episodeId": 4,
+        "title": "はるかなる雷鳴",
+        "arc": "し",
+        "thumbnail": "images/episode/e4.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isLocked": false
+    },
+    {
+        "episodeId": 3,
+        "title": "明日のことを思い出せなくて",
+        "arc": "の",
+        "thumbnail": "images/episode/e3.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isPurchased": false
+    },
+    {
+        "episodeId": 2,
+        "title": "あの日見た空は君の色",
+        "arc": "い",
+        "thumbnail": "images/episode/e2.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isPurchased": true
+    },
+    {
+        "episodeId": 1,
+        "title": "あ",
+        "arc": "北の王編",
+        "thumbnail": "images/episode/e1.png",
+        "updateDate": "2025/8/22",
+        "price": 70,
+        "isPurchased": true
+    }
+]
