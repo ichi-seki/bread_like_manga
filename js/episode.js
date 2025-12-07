@@ -88,9 +88,9 @@ function renderEpisodeList(selectedArc) {
     const currentMangaId = params.get('id');
 
     filteredEpisode.forEach(ep => {
-        const renderLink = `render.html?mangaId=${currentMangaId}&ep=${ep.episodeId}`;
+        const renderLink = `reader.html?mangaId=${currentMangaId}&ep=${ep.episodeId}`;
         htmlContent += `<hr>
-        <a class="episode" href="#" ...>
+        <a class="episode" href="${renderLink}" ...>
             <div class="left_img">
                 <img class="epi_img" src="${ep.thumbnail}">
             </div>
